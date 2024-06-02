@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finals Project</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="icon" href="./imgAsset/iconLogo.jpg">
+
+    <link rel="stylesheet" href="./chat.css"> <!--Styles para sa chat area-->
+</head>
+
+<body>
+    <div class="mainTemplate">
+
+        <div class="template" id="chat-template" style="display: none;"><!--CHAT TEMPLATE-->
+            <div id="chat-hero-text">REAL TIME CHAT FORUM</div>
+
+            <div id="chat-container">
+                <!---->
+                <div id="chat-text-input-container">
+
+                    <form id="submitForm">
+                        <input id="chat-input1" type="text" placeholder="Enter your name" name="name">
+                        <textarea id="chat-textarea" placeholder="Enter Text" name="message"></textarea>
+                        <button type="submit"> Submit </button>
+                    </form>
+
+                    
+                </div>
+
+                <div id="chat-text-container">
+                        <div class="chat-box"></div>
+                        <div class="chat-box"></div>
+                        <div class="chat-box"></div>
+                        
+                </div>
+                <!---->
+            </div>
+        </div><!--CHAT TEMPLATE-->
+
+        <div class="navigation-bar">
+            <div id="nav-bar-logo">Panta</div>
+            <nav id="navbar-btn-container">
+                <button class="navbar-btn"><a href="#page1">Home</a></button>
+                <button class="navbar-btn"><a href="#page2">Service</a></button>
+                <button class="navbar-btn"><a href="#page3">Price</a></button>
+                <button class="navbar-btn"><a href="#page6">Testimonials</a></button>
+                <button class="navbar-btn" id="chatBtn"><a href="#">Chat Forum</a></button>
+            </nav>
+        </div>
+
+        <div class="template" id="page1"> <!--Page 1-->
+            <div id="page1-hero-text">
+                Make your Interior More
+                Minimalistic & Modern
+            </div>
+        </div> <!--Page 1-->
+
+        <div class="template" id="page2"> <!--Page 2-->
+            <div id="page2-gold-text">
+                SERVICE SECTION
+            </div>
+
+            <div id="page2-normal-text">
+                WHY CHOOSE US
+            </div>
+
+            <div id="page2-box-container">
+
+                <div class="page2-box">
+                    <div class="page2-box-main-text">
+                        Luxury facilities
+                    </div>
+                    <div class="page2-box-text">
+                        The advantage of hiring a workspace with us is that givees you comfortable service and
+                        all-around facilities.
+                    </div>
+                </div>
+
+                <div class="page2-box">
+                    <div class="page2-box-main-text">
+                        Affordable Price
+                    </div>
+                    <div class="page2-box-text">
+                        You can get a workspace of the highst quality at an affordable price and still enjoy the
+                        facilities that are oly here.
+                    </div>
+                </div>
+
+                <div class="page2-box">
+                    <div class="page2-box-main-text">
+                        Many Choices
+                    </div>
+                    <div class="page2-box-text">
+                        We provide many unique work space choices so that you can choose the workspace to your liking.
+                    </div>
+                </div>
+
+            </div>
+        </div><!--Page 2-->
+
+        <div class="template" id="page3"><!--Page 3-->
+            <div id="page3-hero-text">
+                Best Selling Product
+            </div>
+
+            <div id="page3-button-container">
+                <div class="page3-button" id="chairBtn" style="background-color: white;">Chair</div>
+                <div class="page3-button" id="bedsBtn">Beds</div>
+                <div class="page3-button" id="sofaBtn">Sofa</div>
+                <div class="page3-button" id="deskBtn">Desk</div>
+            </div>
+
+            <div id="page3-box-conatiner">
+
+                <div class="page3-boxes">
+                    <div class="page3-box-top">
+                        <img src="./imgAsset/page3-asset-1.png" class="page3-images">
+                    </div>
+
+                    <div class="page3-box-bottom">
+                        <div class="page3-box-bot-text1">Chair</div>
+                        <div class="page3-box-bot-text2">Sakarias Armchair</div>
+                        <div class="page3-star-container">
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                        </div>
+                        <div class="page3-price">₱ 11,500</div>
+                    </div>
+                </div>
+
+                <div class="page3-boxes">
+                    <div class="page3-box-top">
+                        <img src="./imgAsset/page3-asset-2.png" class="page3-images">
+                    </div>
+                    <div class="page3-box-bottom">
+                        <div class="page3-box-bot-text1">Chair</div>
+                        <div class="page3-box-bot-text2">Baltsar Chair </div>
+                        <div class="page3-star-container">
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                        </div>
+                        <div class="page3-price">₱ 7,500</div>
+                    </div>
+                </div>
+
+                <div class="page3-boxes">
+                    <div class="page3-box-top">
+                        <img src="./imgAsset/page3-asset-3.png" class="page3-images">
+                    </div>
+                    <div class="page3-box-bottom">
+                        <div class="page3-box-bot-text1">Chair</div>
+                        <div class="page3-box-bot-text2">Anjay Chair</div>
+                        <div class="page3-star-container">
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                        </div>
+                        <div class="page3-price">₱ 13,500</div>
+                    </div>
+                </div>
+
+                <div class="page3-boxes">
+                    <div class="page3-box-top">
+                        <img src="./imgAsset/page3-asset-4.png" class="page3-images">
+                    </div>
+                    <div class="page3-box-bottom">
+                        <div class="page3-box-bot-text1">Chair</div>
+                        <div class="page3-box-bot-text2">Nyantuy Chair</div>
+                        <div class="page3-star-container">
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                            <div class="page3-star"></div>
+                        </div>
+                        <div class="page3-price">₱ 17,500</div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--Page 3-->
+
+        <div class="template" id="page4"><!--Page 4-->
+            <div id="page4-style-img-container">
+                <img src="./imgAsset/page4-asset-2.png" id='page4-main-img'>
+                <img src="./imgAsset/page4-asset-1.png" id="page4-img1">
+                <img src="./imgAsset/page4-asset-1.png" id="page4-img2">
+                <img src="./imgAsset/page4-asset-3.png" id="page4-img3">
+                </img>
+            </div>
+            <div id="page4-text-container">
+                <div id="page4-gold-text">EXPERIENCES</div>
+                <div id="page4-hero-text">We Provide You The Best Experience</div>
+                <div id="page4-main-text">You don’t have to worry about the result because all of these interiors are
+                    made by people who are professionals in their fields with an elegant and lucurious style and with
+                    premium quality materials</div>
+            </div>
+        </div><!--Page 4-->
+
+        <div class="template" id="page5"><!--Page 5-->
+            <div id="page5-style-img-container">
+                <img src="./imgAsset/page5-asset-1.png" id="page5-img-1">
+                <img src="./imgAsset/page5-asset-2.png" id="page5-img-2">
+                <img src="./imgAsset/page5-asset-3.png" id="page5-img-3">
+            </div>
+
+            <div id="page5-style-text-container">
+                <div id="page5-gold-text">MATERIALS</div>
+                <div id="page5-hero-text">Very Serious Materials For Making Furniture</div>
+                <div id="page5-main-text">Because panto was very serious about designing furniture for our environment,
+                    using a very expensive and famous capital but at a relatively low price</div>
+            </div>
+        </div><!--Page 5-->
+
+        <div class="template" id="page6"><!--Page 6-->
+            <div id="page6-gold-text">TESTIMONIALS</div>
+            <div id="page6-main-text">Our Client Reviews</div>
+            <div id="page6-box-container">
+
+                <div class="page6-box">
+                    <img src="./imgAsset/page6-asset-1.png" class="page6-box-img">
+                    <div class="page6-box-platform">
+                        <div class="page6-box-profile-container">
+                            <img src="./imgAsset/page6-asset-4.png" class="page6-profile">
+                        </div>
+                        <div class="page6-box-name">James Talamo</div>
+                        <div class="page6-box-text">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat
+                            mahal“</div>
+                    </div>
+                </div>
+
+                <div class="page6-box">
+                    <img src="./imgAsset/page6-asset-2.png" class="page6-box-img">
+                    <div class="page6-box-platform">
+                        <div class="page6-box-profile-container">
+                            <img src="./imgAsset/page6-asset-5.jpg" class="page6-profile">
+                        </div>
+                        <div class="page6-box-name">Ralph Santos</div>
+                        <div class="page6-box-text">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat
+                            mahal“</div>
+                    </div>
+                </div>
+
+                <div class="page6-box">
+                    <img src="./imgAsset/page6-asset-3.png" class="page6-box-img">
+                    <div class="page6-box-platform">
+                        <div class="page6-box-profile-container">
+                            <img src="./imgAsset/page6-asset-6.png" class="page6-profile">
+                        </div>
+                        <div class="page6-box-name">Joseph Deleon</div>
+                        <div class="page6-box-text">“Terimakasih banyak, kini ruanganku menjadi lebih mewah dan terlihat
+                            mahal“</div>
+                    </div>
+                </div>
+
+            </div>
+        </div><!--Page 6-->
+
+        <div class="template" id="page7"><!--Page 7-->
+            <div id="page7-text">
+                Founded by Members :<br>Joseph, De leon<br>Ralph Santos<br>James Talamo<br>Nathaniel Taggueg<br>Aliyah
+                Bonifacio<br>Adrian Cacao<br><br> Finals Project for Ms. Plastina
+            </div>
+            PANTA 2024
+        </div><!--Page 7-->
+
+
+
+    </div>
+</body>
+
+</html>
+
+<script src="./main.js"></script>

@@ -1,0 +1,134 @@
+#chat-template {
+    position: fixed;
+
+    z-index: 4;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #F7F7F7;
+}
+
+#chat-hero-text {
+    position: absolute;
+
+    left: 50%;
+    transform: translateX(-50%);
+    top: 15%;
+
+    font-size: 42px;
+}
+
+#chat-container {
+    width: 90%;
+    height: 70%;
+
+    background-color: transparent;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 20%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#chat-text-input-container {
+    width: 30%;
+    height: 90%;
+
+    background-color: #dbd8d8;
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    position: relative;
+
+    padding-top: 25px;
+
+}
+
+#chat-text-input-container form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#chat-input1 {
+    width: 400px;
+    height: 70px;
+
+    border-radius: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    text-align: center;
+
+    font-size: 18PX;
+    font-weight: 700;
+    color: black;
+}
+
+#chat-input1::placeholder {
+    text-align: center;
+    font-size: 18x;
+}
+
+#chat-textarea {
+    width: 400px;
+    height: 400px;
+    resize: none;
+    font-weight: 300;
+    text-indent: 5%;
+}
+
+#input-chat-submit {
+    width: 50%;
+    height: 50px;
+
+}
+
+
+/*  */
+
+#chat-text-container {
+    width: 60%;
+    height: 90%;
+
+    background-color: pink; 
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    border-radius: 15px;
+    padding-bottom: 25px;
+
+    overflow-y: auto;
+
+    position: relative;
+}
+
+.chat-box {
+    width: 90%;
+    background-color: red;
+    height: 200px;
+
+    border-radius: 15px;
+
+    margin: 10px;
+
+    position: relative;
+
+    flex-shrink: 0;
+}
