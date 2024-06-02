@@ -165,7 +165,7 @@ submitBtn.addEventListener('submit', (e) => {
         message: message
     }
 
-    let URL = "http://localhost:9191/api"
+    let URL = "https://finalprojectbackend-hci-bscs2.onrender.com/api"
 
     const req = new Request(URL, {
         method: 'POST',
@@ -196,7 +196,7 @@ submitBtn.addEventListener('submit', (e) => {
 let allMessages
 let apiCallAllMessage = async () => {
     try {
-        const res = await fetch('http://localhost:9191/api')
+        const res = await fetch('https://finalprojectbackend-hci-bscs2.onrender.com/api')
         if (!res.ok) throw new Error('INVALID')
         const data = await res.json()
 
