@@ -24,7 +24,7 @@
 
     background-color: transparent;
 
-    position: absolute;
+    position: relative;
     left: 50%;
     transform: translateX(-50%);
     top: 20%;
@@ -32,13 +32,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    /* Ensure space is correctly distributed */
 }
 
 #chat-text-input-container {
     width: 30%;
     height: 90%;
-
-    background-color: #dbd8d8;
 
     border-radius: 15px;
 
@@ -50,6 +49,10 @@
     position: relative;
 
     padding-top: 25px;
+
+    background: rgba(255, 255, 255, 0.31);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12.7px);
 
 }
 
@@ -102,33 +105,66 @@
 /*  */
 
 #chat-text-container {
-    width: 60%;
+    width: 50%;
     height: 90%;
+    
 
-    background-color: pink; 
+    background-color: white;
 
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
     flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    
     border-radius: 15px;
     padding-bottom: 25px;
 
     overflow-y: auto;
 
-    position: relative;
+    background: rgba(255, 255, 255, 0.90);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(12.7px);
 }
 
 .chat-box {
     width: 90%;
-    background-color: red;
+    background-color: #F7F7F7;
     height: 200px;
 
     border-radius: 15px;
 
-    margin: 10px;
-
-    position: relative;
+    margin: 10px 0;
 
     flex-shrink: 0;
+    position: relative;
+}
+
+.chat-box-design1-name{
+    position: absolute;
+    left: 3%;
+    width: 20%;
+    height: 90%;
+    background-color: white;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-box-design2-msg{
+    position: absolute;
+    right: 3%;
+    width: 70%;
+    height: 90%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border-radius: 15px;
+    background-color: white;
+    text-align: center;
 }

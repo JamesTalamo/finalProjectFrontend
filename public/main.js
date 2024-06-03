@@ -152,66 +152,78 @@ chatBtn.addEventListener('click', (e) => {
 
 })
 
-// pag i susubmit na yung message
-let submitBtn = document.querySelector('#submitForm')
-submitBtn.addEventListener('submit', (e) => {
-    e.preventDefault()
 
-    let name = document.getElementById('chat-input1').value
-    let message = document.getElementById('chat-textarea').value
+let allMessages;
+
+let apiCallAllMessage = async () => {
+    try {
+        const res = await fetch('https://finalprojectbackend-hci-bscs2.onrender.com/api');
+        if (!res.ok) throw new Error('INVALID');
+        const data = await res.json();
+        
+        allMessages = data;
+        
+        updateMessages(); 
+    } catch (error) {
+        console.warn(error);
+    }
+};
+
+apiCallAllMessage(); 
+
+let updateMessages = () => {
+    let chatTextContainer = document.querySelector('#chat-text-container');
+    chatTextContainer.innerHTML = '';
+
+    allMessages.forEach((element) => {
+        let box = document.createElement('div');
+        box.classList.add('chat-box');
+
+        let boxName = document.createElement('div');
+        boxName.classList.add('chat-box-design1-name');
+        boxName.innerText = element.name;
+
+        let boxMsg = document.createElement('div');
+        boxMsg.classList.add('chat-box-design2-msg');
+        boxMsg.innerText = element.message;
+
+        box.appendChild(boxName);
+        box.appendChild(boxMsg);
+
+        chatTextContainer.appendChild(box);
+    });
+};
+
+let submitBtn = document.querySelector('#submitForm');
+submitBtn.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    let name = document.getElementById('chat-input1').value;
+    let message = document.getElementById('chat-textarea').value;
 
     const obj = {
         name: name,
         message: message
-    }
+    };
 
-    let URL = "https://finalprojectbackend-hci-bscs2.onrender.com/api"
+    let URL = "https://finalprojectbackend-hci-bscs2.onrender.com/api";
 
-    const req = new Request(URL, {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(obj)
-    })
-
-    const fetchApi = async () => {
-        try {
-            const res = await fetch(req)
-            if (!res.ok) throw new error('INVALID')
-            const data = await res.json()
-
-            console.log(data)
-        } catch (error) {
-            console.log(error.message)
-        }
-
-    }
-
-    fetchApi()
-    document.getElementById('chat-input1').value = '';
-    document.getElementById('chat-textarea').value = '';
-})
-
-let allMessages
-let apiCallAllMessage = async () => {
     try {
-        const res = await fetch('https://finalprojectbackend-hci-bscs2.onrender.com/api')
-        if (!res.ok) throw new Error('INVALID')
-        const data = await res.json()
+        const res = await fetch(URL, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(obj)
+        });
 
+        if (!res.ok) throw new Error('INVALID');
 
-        allMessages = data
+        await apiCallAllMessage();
 
-
+        document.getElementById('chat-input1').value = '';
+        document.getElementById('chat-textarea').value = '';
     } catch (error) {
-        console.warn()
+        console.log(error.message);
     }
-
-    setTimeout(() => {
-        console.log(allMessages)
-    }, 1000)    
-}
-
-apiCallAllMessage() //dito kukunin yung data sa database
-
+});
