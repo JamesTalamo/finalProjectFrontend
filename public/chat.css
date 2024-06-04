@@ -97,10 +97,19 @@
 
 #input-chat-submit {
     width: 50%;
-    height: 50px;
+    height: 40px;
+
+    position: absolute;
+    bottom: 5%;
 
 }
 
+
+#refreshBtn{
+    position: absolute;
+    right: 0%;
+    top: 5%;
+}
 
 /*  */
 

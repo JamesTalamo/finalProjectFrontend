@@ -227,3 +227,14 @@ submitBtn.addEventListener('submit', async (e) => {
         console.log(error.message);
     }
 });
+
+
+//refresh msg
+let refreshBtn = document.querySelector('#refreshBtn')
+refreshBtn.addEventListener('click', (e) =>{
+    e.preventDefault()
+
+    console.log('Refreshing messages')
+    apiCallAllMessage()
+    updateMessages()
+})
