@@ -160,16 +160,16 @@ let apiCallAllMessage = async () => {
         const res = await fetch('https://finalprojectbackend-hci-bscs2.onrender.com/api');
         if (!res.ok) throw new Error('INVALID');
         const data = await res.json();
-        
+
         allMessages = data;
-        
-        updateMessages(); 
+
+        updateMessages();
     } catch (error) {
         console.warn(error);
     }
 };
 
-apiCallAllMessage(); 
+apiCallAllMessage();
 
 let updateMessages = () => {
     let chatTextContainer = document.querySelector('#chat-text-container');
@@ -231,7 +231,7 @@ submitBtn.addEventListener('submit', async (e) => {
 
 //refresh msg
 let refreshBtn = document.querySelector('#refreshBtn')
-refreshBtn.addEventListener('click', (e) =>{
+refreshBtn.addEventListener('click', (e) => {
     e.preventDefault()
 
     console.log('Refreshing messages')
@@ -241,27 +241,32 @@ refreshBtn.addEventListener('click', (e) =>{
 
 //delete msg
 let deleteBtn = document.querySelector('#deleteBtn')
-deleteBtn.addEventListener('click', (e) =>{
+deleteBtn.addEventListener('click', (e) => {
     e.preventDefault()
 
     let fetchDelete = async () => {
         let URL = "https://finalprojectbackend-hci-bscs2.onrender.com/api"
-        
-        try{
+
+        try {
             let res = await fetch(URL, {
-                method : 'DELETE',
-                headers : {
-                    'content-type' : 'application/json'
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
                 }
             })
-        
-            if(!res.ok) throw new error('INVALID')
+
+            if (!res.ok) throw new error('INVALID')
             let data = await res.json()
-        }catch(error){
+        } catch (error) {
             console.warn()
         }
     }
-    
+
     fetchDelete()
-    
+    setTimeout(() => {
+        console.log('Restarting now')
+        apiCallAllMessage()
+        updateMessages()
+    }, 500)
+
 })
