@@ -203,6 +203,7 @@ body {
 #page3 {
     position: relative;
     background-color: #F7F7F7;
+    
 }
 
 #page3-hero-text {
@@ -213,7 +214,7 @@ body {
 
     font-size: 42px;
 
-    top: 5%;
+    top: 12%;
 }
 
 #page3-button-container {
@@ -221,7 +222,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
 
-    top: 12%;
+    top: 19%;
 
     width: 500px;
     height: 80px;
@@ -264,7 +265,7 @@ body {
     height: 70%;
     background-color: transparent;
     position: absolute;
-    top: 20%;
+    top: 25%;
 
     left: 50%;
     transform: translateX(-50%);
@@ -534,7 +535,7 @@ body {
     color: #E58411;
 
     position: absolute;
-    top: 10%;
+    top: 15%;
 
     left: 50%;
     transform: translateX(-50%);
@@ -545,7 +546,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 15%;
+    top: 20%;
 
     font-size: 42px;
 }
