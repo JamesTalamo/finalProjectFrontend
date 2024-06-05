@@ -111,6 +111,12 @@
     top: 5%;
 }
 
+#deleteBtn{
+    position: absolute;
+    right: 0%;
+    top: 10%;
+}
+
 /*  */
 
 #chat-text-container {

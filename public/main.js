@@ -238,3 +238,30 @@ refreshBtn.addEventListener('click', (e) =>{
     apiCallAllMessage()
     updateMessages()
 })
+
+//delete msg
+let deleteBtn = document.querySelector('#deleteBtn')
+deleteBtn.addEventListener('click', (e) =>{
+    e.preventDefault()
+
+    let fetchDelete = async () => {
+        let URL = "https://finalprojectbackend-hci-bscs2.onrender.com/api"
+        
+        try{
+            let res = await fetch(URL, {
+                method : 'DELETE',
+                headers : {
+                    'content-type' : 'application/json'
+                }
+            })
+        
+            if(!res.ok) throw new error('INVALID')
+            let data = await res.json()
+        }catch(error){
+            console.warn()
+        }
+    }
+    
+    fetchDelete()
+    
+})
