@@ -714,30 +714,57 @@ body {
     position: relative;
     height: 40vh;
 
-    background-color: #F7F7F7;
+    background-color: #444444;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    color: black;
+    color: white;
 
     font-size: 30px;
 }
 
-/* PAGE7 STYLES */
-#page7-text {
-    width: 30%;
-    height: 90%;
+#page7-logo{
+    position: absolute;
+    left: 5%;
+    top: 20%;
+    color: black;
+}
+
+#page7-container-name{
+    width: 10%;
+    height: 60%;
 
     position: absolute;
-    left: 10%;
+    top: 30%;
+    left: 3%;
 
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-    font-size: 18px;
+#page7-container-name a {
+    color: white;
+    text-decoration: underline;
+    font-size: 22px;
+}
 
-    color: #a89b9b;
+#page7-line{
+    width: 1px;
+    height: 90%;
+    background-color: white;
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}   
+
+#page7-2024{
+    position: absolute;
+    right: 5%;
+    bottom: 10%;
 }
