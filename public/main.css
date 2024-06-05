@@ -286,13 +286,24 @@ body {
     position: relative;
 
     overflow: hidden;
+    
+    transition: 0.5s;
+   
+}
+
+.page3-boxes:hover{
+    transform:scale(1.1);
+}
+
+.page3-boxes:hover .page3-price{
+    transform:scale(1.5);
 }
 
 .page3-box-top {
     background-color: #FAFAFA;
     width: 100%;
     height: 60%;
-
+    
 }
 
 .page3-images {
@@ -354,6 +365,8 @@ body {
     top: 70%;
     font-size: 22px;
     left: 10%;
+
+    transition: 0.3s;
 }
 
 /* STYLES NG PAGE4 */

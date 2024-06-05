@@ -183,3 +183,13 @@
     background-color: white;
     text-align: center;
 }
+
+.chat-box-date{
+    width: 150px;
+    height: 50px;
+    background-color: transparent;
+
+    position: absolute;
+    right: 10%;
+    bottom: 0%;
+}

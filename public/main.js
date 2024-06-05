@@ -171,28 +171,34 @@ let apiCallAllMessage = async () => {
 
 apiCallAllMessage();
 
-let updateMessages = () => {
-    let chatTextContainer = document.querySelector('#chat-text-container');
-    chatTextContainer.innerHTML = '';
+    let updateMessages = () => {
+        let chatTextContainer = document.querySelector('#chat-text-container');
+        chatTextContainer.innerHTML = '';
 
-    allMessages.forEach((element) => {
-        let box = document.createElement('div');
-        box.classList.add('chat-box');
+        allMessages.forEach((element) => {
+            let box = document.createElement('div');
+            box.classList.add('chat-box');
 
-        let boxName = document.createElement('div');
-        boxName.classList.add('chat-box-design1-name');
-        boxName.innerText = element.name;
+            let boxName = document.createElement('div');
+            boxName.classList.add('chat-box-design1-name');
+            boxName.innerText = element.name;
 
-        let boxMsg = document.createElement('div');
-        boxMsg.classList.add('chat-box-design2-msg');
-        boxMsg.innerText = element.message;
+            let boxMsg = document.createElement('div');
+            boxMsg.classList.add('chat-box-design2-msg');
+            boxMsg.innerText = element.message;
 
-        box.appendChild(boxName);
-        box.appendChild(boxMsg);
 
-        chatTextContainer.appendChild(box);
-    });
-};
+            let boxDate = document.createElement('div')
+            boxDate.classList.add('chat-box-date')
+            boxDate.innerText = element.createdAt.split('T')[0]
+
+            box.appendChild(boxName);
+            box.appendChild(boxMsg);
+            box.appendChild(boxDate);
+
+            chatTextContainer.appendChild(box);
+        });
+    };
 
 let submitBtn = document.querySelector('#submitForm');
 submitBtn.addEventListener('submit', async (e) => {
