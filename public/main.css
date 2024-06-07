@@ -729,6 +729,8 @@ body {
     position: absolute;
     left:20%;
     top: 30%;
+
+    background-color: red;
 }
 
 #page7-main-text{

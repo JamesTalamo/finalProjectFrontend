@@ -172,6 +172,7 @@
     #page7-text-container{
         left: 50%;
         transform: translateX(-50%);
+        top: 15%;
     }
 
     #page7-main-text,

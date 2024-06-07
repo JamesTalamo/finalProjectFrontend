@@ -101,6 +101,7 @@
 
     position: absolute;
     bottom: 5%;
+    cursor:pointer;
 
 }
 
@@ -109,14 +110,22 @@
     position: absolute;
     right: 0%;
     top: 5%;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+    cursor:pointer;
+>>>>>>> 928f42af78b76b22ca3dee0ed955d1f28c55f389
 }
 
 #deleteBtn{
     position: absolute;
     right: 0%;
     top: 10%;
+<<<<<<< HEAD
     cursor: pointer;
+=======
+    cursor:pointer;
+>>>>>>> 928f42af78b76b22ca3dee0ed955d1f28c55f389
 }
 
 /*  */
