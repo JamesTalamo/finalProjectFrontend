@@ -29,7 +29,7 @@ body {
     height: 100vh;
 
     background-color: transparent;
-    overflow-y: hidden;
+    overflow: hidden;
 
 }
 
@@ -428,11 +428,10 @@ body {
 
 #page4-text-container {
     position: absolute;
-    right: 0;
+    right: 5%;
     position: absolute;
-    width: 900px;
+    width: 600px;
     height: 800px;
-    background-color: transparent;
 
     top: 50%;
     transform: translateY(-50%);
@@ -501,7 +500,7 @@ body {
 }
 
 #page5-style-text-container {
-    width: 900px;
+    width: 500px;
     height: 800px;
     background-color: transparent;
     position: absolute;
@@ -530,7 +529,7 @@ body {
 
 #page5-main-text {
     font-weight: 300;
-    width: 600px;
+    width: 450px;
     position: absolute;
     top: 70%;
     font-size: 22px;
@@ -555,7 +554,7 @@ body {
 }
 
 #page6-main-text {
-    columns: black;
+    color: black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -572,7 +571,7 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    top: 20%;
+    top: 25%;
 
     display: flex;
     align-items: center;
@@ -714,57 +713,35 @@ body {
     position: relative;
     height: 40vh;
 
-    background-color: #444444;
+    background-color: #F7F7F7;
 
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: white;
 
     font-size: 30px;
 }
 
-#page7-logo{
-    position: absolute;
-    left: 5%;
-    top: 20%;
-    color: black;
-}
-
-#page7-container-name{
-    width: 10%;
-    height: 60%;
+#page7-text-container{
+    width: 25%;
+    height: 70%;
 
     position: absolute;
+    left:20%;
     top: 30%;
-    left: 3%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
-#page7-container-name a {
-    color: white;
-    text-decoration: underline;
-    font-size: 22px;
+#page7-main-text{
+    position: absolute;
+    left: 0%;
+    top: 0%;
 }
 
-#page7-line{
-    width: 1px;
-    height: 90%;
-    background-color: white;
-
+#page7-main-text2{
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-}   
+    left: 0;
+    top: 25%;
 
-#page7-2024{
-    position: absolute;
-    right: 5%;
-    bottom: 10%;
+    font-weight: 300;
+    font-size: 18px;
 }

@@ -1,0 +1,254 @@
+@media (max-width:1470px) {
+    /* Styles for page !1! responsive */
+
+    #page1-hero-text {
+        font-size: 5.5vw;
+    }
+
+    /* Styles for page !2! responsive */
+
+    /* Styles for page !4! responsive */
+    #page4-text-container {
+        right: 0;
+    }
+
+    #page4-style-img-container {
+        width: 50vw;
+    }
+
+    /* Styles for page !5! responsive */
+
+    #page5-style-img-container {
+        width: 50vw;
+
+    }
+}
+
+@media (max-width:1240px) {
+    /* Styles for page 1 responsive */
+
+    #page1-hero-text {
+        font-size: 6.5vw;
+    }
+
+    /* Styles for page !2! responsive */
+    #page2 {
+        height: 150vh;
+
+    }
+
+    #page2-gold-text {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+    }
+
+    #page2-normal-text {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 15%;
+    }
+
+
+    #page2-box-container {
+        top: 20%;
+
+        left: 50%;
+        transform: translateX(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .page2-box {
+        width: 260px;
+        height: 300px;
+    }
+
+    /* Styles for page !3 ! responsive */
+    #page3 {
+        height: 270vh;
+    }
+
+    #page3-hero-text {
+        top: 4%;
+    }
+
+    #page3-button-container {
+        top: 8%;
+    }
+
+    #page3-box-conatiner {
+        flex-direction: column;
+        top: 10%;
+        height: 90%;
+    }
+
+    /* Styles for page !4! responsive */
+
+    #page4 {
+        height: 90vh;
+    }
+
+    #page4-style-img-container {
+        display: none;
+    }
+
+    #page4-text-container {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 7%;
+    }
+
+    #page4-gold-text {
+        top: 5%;
+    }
+
+    #page4-hero-text {
+        top: 12%;
+    }
+
+    #page4-main-text {
+        top: 45%;
+    }
+
+    #page4-gold-text,
+    #page4-hero-text,
+    #page4-main-text {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #page4-main-text {
+        width: 50vw;
+    }
+
+    /* Styles for page !5! responsive */
+
+    #page5 {
+        height: 90vh;
+    }
+
+    #page5-style-text-container {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+
+    }
+
+    #page5-gold-text {
+        top: 5%;
+    }
+
+    #page5-hero-text {
+        top: 12%;
+    }
+
+    #page5-main-text {
+        top: 45%;
+    }
+
+    #page5-gold-text,
+    #page5-hero-text,
+    #page5-main-text {
+        left: 50%;
+        transform: translateX(-50%);
+        text-align: center;
+    }
+
+    #page5-main-text {
+        width: 50vw;
+    }
+
+    #page5-style-img-container {
+        display: none;
+    }
+
+    /* Styles for page !7! responsive */
+
+    #page7-text-container{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page7-main-text,
+    #page7-main-text2{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    #page7-main-text2{
+        width: 100%;
+        text-align: center;
+    }
+
+
+}
+
+
+@media (max-width:1040px) {}
+
+
+@media (max-width:840px) {
+    /* Styles for page 1 responsive */
+
+    #page1-hero-text {
+        font-size: 7.5vw;
+    }
+
+    /* Styles for page !3 ! responsive */
+
+    #page3-hero-text {
+        font-size: 7vw;
+        width: 80%;
+        text-align: center;
+    }
+
+    /* Styles for page !6! responsive */
+
+    #page6-main-text {
+        width: 80vw;
+        text-align: center;
+    }
+
+    #page6-box-container {
+        mask-image: none;
+
+    }
+}
+
+
+@media (max-width:640px) {
+    /* Styles for page 1 responsive */
+
+    #page1-hero-text {
+        font-size: 9.5vw;
+    }
+
+    /* Styles for page !3 ! responsive */
+
+    #page3-button-container {
+        top: 8%;
+        width: 350px;
+    }
+}
+
+
+@media (max-width:440px) {
+    /* Styles for page 1 responsive */
+
+    #page1-hero-text {
+        font-size: 10.5vw;
+    }
+
+    /* Styles for page !3 ! responsive */
+
+
+
+}
+
+
+@media (max-width:340px) {}
