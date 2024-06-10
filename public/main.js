@@ -133,6 +133,9 @@ deskBtn.addEventListener('click', (e) => {
 let chatBtn = document.querySelector('#chatBtn')
 chatBtn.addEventListener('click', (e) => {
     e.preventDefault()
+    setTimeout(() => {
+        scrollToLatestMessage();
+    }, 500)
 
     let chatTemplate = document.querySelector('#chat-template')
     if (chatTemplate.style.display === 'none') {
@@ -152,8 +155,38 @@ chatBtn.addEventListener('click', (e) => {
 
 })
 
+// 
+//CHAT GPT GALING, LAGING mag scroll sa pinaka bagong child nung container
+
+function scrollToLatestMessage() {
+    const innerContainer = document.getElementById('inner-container');
+    const latestMessage = innerContainer.lastElementChild;
+
+    if (latestMessage) {
+        latestMessage.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
 
 let allMessages;
+let timeGlobal;
+
+let timeApi = async () => {//THIRD PARTY API Para sa oras 
+    let time = 'https://worldtimeapi.org/api/timezone/Asia/Manila'
+
+
+    //API call for the timezone api
+    let timeCall = await fetch(time)
+    if (!timeCall.ok) throw new Error("There's an error with time api")
+    let timeSet = await timeCall.json()
+
+    setTimeout(() => {
+        timeGlobal = timeSet.datetime.split('T')[1].split('.')[0]
+    }, 500)
+
+}
+
+
 
 let apiCallAllMessage = async () => {
     try {
@@ -164,41 +197,53 @@ let apiCallAllMessage = async () => {
         allMessages = data;
 
         updateMessages();
+        timeApi()
     } catch (error) {
         console.warn(error);
     }
 };
 
 apiCallAllMessage();
-
-    let updateMessages = () => {
-        let chatTextContainer = document.querySelector('#chat-text-container');
-        chatTextContainer.innerHTML = '';
-
-        allMessages.forEach((element) => {
-            let box = document.createElement('div');
-            box.classList.add('chat-box');
-
-            let boxName = document.createElement('div');
-            boxName.classList.add('chat-box-design1-name');
-            boxName.innerText = element.name;
-
-            let boxMsg = document.createElement('div');
-            boxMsg.classList.add('chat-box-design2-msg');
-            boxMsg.innerText = element.message;
+setInterval(apiCallAllMessage, 1000);
 
 
-            let boxDate = document.createElement('div')
-            boxDate.classList.add('chat-box-date')
-            boxDate.innerText = element.createdAt.split('T')[0]
+let updateMessages = () => {
+    let chatTextContainer = document.querySelector('#inner-container');
+    chatTextContainer.innerHTML = '';
 
-            box.appendChild(boxName);
-            box.appendChild(boxMsg);
-            box.appendChild(boxDate);
+    allMessages.forEach((element) => {
+        let box = document.createElement('div');
+        box.classList.add('chat-box');
 
-            chatTextContainer.appendChild(box);
-        });
-    };
+        let boxName = document.createElement('div');
+        boxName.classList.add('chat-box-design1-name');
+        boxName.innerText = element.name;
+
+        let boxMsg = document.createElement('div');
+        boxMsg.classList.add('chat-box-design2-msg');
+        // boxMsg.innerText = element.message;
+
+        let innerMsg = document.createElement('p')
+        innerMsg.innerText = element.message
+        innerMsg.style.backgroundColor = 'transparent'
+        innerMsg.style.width = '100%'
+        innerMsg.style.height = 'auto'
+
+        boxMsg.appendChild(innerMsg)
+
+
+
+        let boxDate = document.createElement('div')
+        boxDate.classList.add('chat-box-date')
+        boxDate.innerText = element.createdAt
+
+        box.appendChild(boxName);
+        box.appendChild(boxMsg);
+        box.appendChild(boxDate);
+
+        chatTextContainer.appendChild(box);
+    });
+};
 
 let submitBtn = document.querySelector('#submitForm');
 submitBtn.addEventListener('submit', async (e) => {
@@ -206,10 +251,12 @@ submitBtn.addEventListener('submit', async (e) => {
 
     let name = document.getElementById('chat-input1').value;
     let message = document.getElementById('chat-textarea').value;
+    let createdAt = timeGlobal
 
     const obj = {
         name: name,
-        message: message
+        message: message,
+        createdAt: createdAt
     };
 
     let URL = "https://finalprojectbackend-hci-bscs2.onrender.com/api";
@@ -234,16 +281,6 @@ submitBtn.addEventListener('submit', async (e) => {
     }
 });
 
-
-//refresh msg
-let refreshBtn = document.querySelector('#refreshBtn')
-refreshBtn.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    console.log('Refreshing messages')
-    apiCallAllMessage()
-    updateMessages()
-})
 
 //delete msg
 let deleteBtn = document.querySelector('#deleteBtn')
