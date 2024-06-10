@@ -197,7 +197,6 @@ let apiCallAllMessage = async () => {
         allMessages = data;
 
         updateMessages();
-        scrollToLatestMessage()
         timeApi()
     } catch (error) {
         console.warn(error);
@@ -209,6 +208,7 @@ setInterval(apiCallAllMessage, 1000);
 
 
 let updateMessages = () => {
+    scrollToLatestMessage()
     let chatTextContainer = document.querySelector('#inner-container');
     chatTextContainer.innerHTML = '';
 
