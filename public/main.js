@@ -208,7 +208,6 @@ setInterval(apiCallAllMessage, 1000);
 
 
 let updateMessages = () => {
-    scrollToLatestMessage()
     let chatTextContainer = document.querySelector('#inner-container');
     chatTextContainer.innerHTML = '';
 
@@ -222,7 +221,6 @@ let updateMessages = () => {
 
         let boxMsg = document.createElement('div');
         boxMsg.classList.add('chat-box-design2-msg');
-        // boxMsg.innerText = element.message;
 
         let innerMsg = document.createElement('p')
         innerMsg.innerText = element.message
