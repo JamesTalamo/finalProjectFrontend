@@ -197,6 +197,7 @@ let apiCallAllMessage = async () => {
         allMessages = data;
 
         updateMessages();
+        scrollToLatestMessage()
         timeApi()
     } catch (error) {
         console.warn(error);
