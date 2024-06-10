@@ -312,3 +312,30 @@ deleteBtn.addEventListener('click', (e) => {
     }, 500)
 
 })
+
+// responsive navigation
+let hideBtn = document.querySelector('#hideBtn')
+hideBtn.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    let navigationBar = document.querySelector('.navigation-bar')
+    if (navigationBar.style.left === '-100vw') {
+        navigationBar.style.left = '0'
+    } else {
+        navigationBar.style.left = '-100vw'
+
+        let hideBtn1 = document.querySelector('#hideBtn1')
+        hideBtn1.style.display = 'block'
+    }
+})
+let hideBtn1 = document.querySelector('#hideBtn1')
+hideBtn1.addEventListener('click', (e) => {
+    e.preventDefault()
+    hideBtn1.style.display = 'none'
+    let navigationBar = document.querySelector('.navigation-bar')
+    if (navigationBar.style.left === '-100vw') {
+        navigationBar.style.left = '0'
+    } else {
+        navigationBar.style.left = '-100vw'
+    }
+})
