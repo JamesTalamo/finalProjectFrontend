@@ -137,11 +137,17 @@ chatBtn.addEventListener('click', (e) => {
         scrollToLatestMessage();
     }, 500)
 
+    let main = document.querySelector('#main')
+
     let chatTemplate = document.querySelector('#chat-template')
     if (chatTemplate.style.display === 'none') {
         chatTemplate.style.display = 'block'
+        
+        main.style.display='none'
+
     } else {
         chatTemplate.style.display = 'none'
+        main.style.display='block'
     }
 
     let mainTemplate = document.querySelector('body')

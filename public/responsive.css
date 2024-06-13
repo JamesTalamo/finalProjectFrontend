@@ -193,7 +193,7 @@
 @media (max-width:1040px) {
 
     /* Styles for Navigation */
-    #hideBtn{
+    #hideBtn {
         display: block;
     }
 
@@ -221,7 +221,7 @@
         height: 60%;
         flex-direction: column;
 
-        position: relative; 
+        position: relative;
         top: 60%;
 
         display: flex;
@@ -229,42 +229,42 @@
         justify-content: center;
     }
 
-        #chat-hero-text{
-            width:60vw;
-            top: 5%;
-            text-align: center;
-        }
+    #chat-hero-text {
+        width: 60vw;
+        top: 3%;
+        text-align: center;
+    }
 
 
 
-    #chat-text-container{
+    #chat-text-container {
         width: 100%;
     }
 
-    #chat-container{
-        width:100%;
-    
+    #chat-container {
+        width: 100%;
+
         height: 80%;
+
+        top: 13%;
     }
 
-    #chat-text-input-container{
+    #chat-text-input-container {
         width: 100%;
         height: 30%;
     }
 
-    #submitForm{
+    #submitForm {
         flex-direction: column;
     }
 
-    .chat-box{
+    .chat-box {
         width: 100%;
     }
 
-    .chat-box-design1-name{
-     
-    }
+    .chat-box-design1-name {}
 
-    .chat-box-design2-msg{
+    .chat-box-design2-msg {
         min-width: 200px;
     }
 }
@@ -314,12 +314,12 @@
     }
 
     /* Styles for chat */
-    #chat-hero-text{
+    #chat-hero-text {
         font-size: 30px;
         width: 90%;
     }
 
-    .chat-box-design2-msg{
+    .chat-box-design2-msg {
         MAX-width: 100px;
     }
 }
