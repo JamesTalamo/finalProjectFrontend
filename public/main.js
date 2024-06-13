@@ -190,6 +190,7 @@ let timeApi = async () => {//THIRD PARTY API Para sa oras
 
 let apiCallAllMessage = async () => {
     try {
+        
         const res = await fetch('https://finalprojectbackend-hci-bscs2.onrender.com/api');
         if (!res.ok) throw new Error('INVALID');
         const data = await res.json();
