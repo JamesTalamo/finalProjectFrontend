@@ -167,13 +167,16 @@ navBarBtn.forEach((element) => {
         console.log('I got clicked')
 
         let chatTemplate = document.querySelector('#chat-template')
-
         chatTemplate.style.display = 'none'
 
         let main = document.querySelector('#main')
-
-
         main.style.display = 'block'
+
+        let mainTemplate = document.querySelector('body')
+
+        mainTemplate.style.overflow = 'scroll'
+
+
     })
 })
 
