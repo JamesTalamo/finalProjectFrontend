@@ -142,12 +142,12 @@ chatBtn.addEventListener('click', (e) => {
     let chatTemplate = document.querySelector('#chat-template')
     if (chatTemplate.style.display === 'none') {
         chatTemplate.style.display = 'block'
-        
-        main.style.display='none'
+
+        main.style.display = 'none'
 
     } else {
         chatTemplate.style.display = 'none'
-        main.style.display='block'
+        main.style.display = 'block'
     }
 
     let mainTemplate = document.querySelector('body')
@@ -159,6 +159,22 @@ chatBtn.addEventListener('click', (e) => {
         mainTemplate.style.overflowX = 'hidden'
     }
 
+})
+
+let navBarBtn = document.querySelectorAll('.navbar-btn')
+navBarBtn.forEach((element) => {
+    element.addEventListener('click', (e) => {
+        console.log('I got clicked')
+
+        let chatTemplate = document.querySelector('#chat-template')
+
+        chatTemplate.style.display = 'none'
+
+        let main = document.querySelector('#main')
+
+
+        main.style.display = 'block'
+    })
 })
 
 // 
@@ -196,7 +212,7 @@ let timeApi = async () => {//THIRD PARTY API Para sa oras
 
 let apiCallAllMessage = async () => {
     try {
-        
+
         const res = await fetch('https://finalprojectbackend-hci-bscs2.onrender.com/api');
         if (!res.ok) throw new Error('INVALID');
         const data = await res.json();

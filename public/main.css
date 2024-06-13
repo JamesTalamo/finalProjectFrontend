@@ -102,7 +102,7 @@ body {
     gap: 1rem;
 }
 
-.navbar-btn {
+.navbar-btn, #chatBtn {
     width: 130px;
     height: 70%;
     background-color: transparent;
@@ -119,7 +119,7 @@ body {
 
 }
 
-.navbar-btn a {
+.navbar-btn a, #chatBtn a{
     color: black;
     text-decoration: none;
 
