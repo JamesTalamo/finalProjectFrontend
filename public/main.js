@@ -160,7 +160,7 @@ chatBtn.addEventListener('click', (e) => {
     }
 
 })
-
+// 
 let navBarBtn = document.querySelectorAll('.navbar-btn')
 navBarBtn.forEach((element) => {
     element.addEventListener('click', (e) => {
@@ -175,9 +175,20 @@ navBarBtn.forEach((element) => {
         let mainTemplate = document.querySelector('body')
 
         mainTemplate.style.overflow = 'scroll'
-
-
     })
+})
+
+let navBarLogo = document.querySelector('#nav-bar-logo')
+navBarLogo.addEventListener('click', (e) => {
+    let chatTemplate = document.querySelector('#chat-template')
+    chatTemplate.style.display = 'none'
+
+    let main = document.querySelector('#main')
+    main.style.display = 'block'
+
+    let mainTemplate = document.querySelector('body')
+
+    mainTemplate.style.overflow = 'scroll'
 })
 
 // 
