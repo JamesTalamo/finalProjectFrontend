@@ -235,6 +235,9 @@
         text-align: center;
     }
 
+    #submitForm {
+        flex-direction: column;
+    }
 
 
     #chat-text-container {
@@ -246,23 +249,21 @@
 
         height: 80%;
 
-        top: 13%;
+        top: 10%;
     }
 
     #chat-text-input-container {
         width: 100%;
-        height: 30%;
-    }
-
-    #submitForm {
-        flex-direction: column;
+        height: 20%;
     }
 
     .chat-box {
         width: 100%;
     }
 
-    .chat-box-design1-name {}
+    #deleteBtn{
+        top: 10%;
+    }
 
     .chat-box-design2-msg {
         min-width: 200px;
